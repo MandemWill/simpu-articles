@@ -72,20 +72,20 @@ function App() {
       <Tr>
         <Td><Checkbox/>Woo Commerce Integration</Td>
         <Td>21 hours ago</Td>
-        <Td >25.4</Td>
-        <Td >25.4</Td>
+        <Td >21 hours ago</Td>
+        <Td >21 hours ago</Td>
       </Tr>
       <Tr>
         <Td><Checkbox/>Woo Commerce Integration</Td>
         <Td>21 hours ago</Td>
-        <Td>30.48</Td>
-        <Td >25.4</Td>
+        <Td>21 hours ago</Td>
+        <Td ></Td>
       </Tr>
       <Tr>
         <Td><Checkbox/>Woo Commerce Integration</Td>
         <Td>21 hours ago</Td>
-        <Td>0.91444</Td>
-        <Td >25.4</Td>
+        <Td>21 hours ago</Td>
+        <Td >21 hours ago</Td>
       </Tr>
     </Tbody>
     {/* <Tfoot>
