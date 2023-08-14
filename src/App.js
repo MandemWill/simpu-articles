@@ -1,16 +1,17 @@
 import React from 'react';
 import {
   ChakraProvider,
+  extendTheme,
   Button,
   Input,
   InputGroup,
   InputLeftElement,
   InputRightAddon,
-  theme,
   Divider,
   Heading,
   Center,
-  Text, 
+  Text,
+  Stack, 
   Table,
   Thead,
   Tbody,
@@ -24,12 +25,15 @@ import {
 } from '@chakra-ui/react';
 import { Search2Icon } from "@chakra-ui/icons";
 import { SmallAddIcon } from '@chakra-ui/icons';
-import { Checkbox } from '@chakra-ui/react'
+import { Checkbox } from '@chakra-ui/react';
+import customTheme from './theme';
 
 
 function App() {
+ const mergedTheme = extendTheme(customTheme);
+
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={mergedTheme}>
       <Box w='100%' color='white' p={4}> 
       <InputGroup borderRadius={5} size="sm">
         <InputLeftElement
@@ -51,13 +55,25 @@ function App() {
       <Heading as='h4' size='md'  paddingLeft={20} paddingTop={5}> 
         All articles
       </Heading>
-      <Text fontSize='md' paddingLeft={20} paddingTop={35} paddingBottom={30} color={'blue'}>
+      <Stack direction='row' spacing={4} justify='right' paddingRight={25}>
+      <Button colorScheme='gray'>Get started with articles</Button>
+      <Button bg='black' color='white'>New article</Button>
+      </Stack>
+      <Text fontSize='md' paddingLeft={20} paddingBottom={30} color={'blue'}>
         <SmallAddIcon/>
         Add filter
       </Text>
       <Center>
       <Divider  w='95%'/>
       </Center>
+      <Box paddingLeft={20} paddingTop={5}>
+      <Text as='b'>
+        171 articles
+      </Text>
+      </Box>
+      <Stack direction='row' justify='right' paddingRight={25}>
+      <Button colorScheme='gray'>Display columns</Button>
+      </Stack>
  <TableContainer p={10}>
       <Table size='sm'>
     <Thead>
